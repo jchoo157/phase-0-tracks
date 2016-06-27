@@ -3,25 +3,21 @@ h1 {
 }
 
 #octopus {
-	position: absolute;
+    position: absolute;
     top: 10px; bottom:0; left: 0; right:0;
     margin: auto;
 }
 
 #hat {
 	position: absolute;
-    top: 0; bottom:0; left: 0; right:0;
+    top: 0; bottom:230px; left: 10px; right:0;
     margin: auto;
     z-index: 2;
-    margin-top: 170px;
-    margin-left: 315px;
 }
 
 #glasses {
 	position: absolute;
-    top: 0; bottom:0; left: 0; right:0;
+    top: 0; bottom:20px; left: 5px; right:0;
     margin: auto;
     z-index: 2;
-    margin-top: 328px;
-    margin-left: 378px;
 }
