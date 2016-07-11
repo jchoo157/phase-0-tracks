@@ -1,0 +1,42 @@
+- Find elevator
+  - Look for buttons to open the elevator
+    - If you need to go up, click the up arrow button
+    - Else, if you need to go down, click the down arrow button
+  - Wait for elevator to open
+  - Enter the elevator
+    - Look for buttons with numbers or letters within the elevator
+    - Press the button of the desired floor number or letter
+    - Wait for elevator to move to desired floor
+      - If elevator opens on a floor that does not match the button you pressed, stay in elevator
+      - Once floor matches desired floor pressed, exit elevator
+  
+
+Eating Cereal
+
+- Walk to cabinet with bowls
+  - Open cabinet
+  - Grab a bowl
+  - Close cabinet
+- Walk to utensil drawer
+  - Open drawer
+  - Grab a spoon
+  - Close drawer
+- Walk to fridge
+  - Open fridge
+  - Grab milk
+  - Close fridge
+- Walk food cabinet
+  - Open cabinet
+  - Grab cereal
+  - Close cabinet
+- Walk to table
+  - Place everything down on table
+  - Take a seat on a chair
+  - Open cereal box and pour cereal into bowl until half full
+  - Close cereal box
+  - Open milk and pour into bowl until bowl is half full
+  - Close milk
+  - Use spoon to eat cereal
+- When bowl is empty
+  - Stand up and put everything back where you originally grabbed them except for the bowl and utensils
+  - Place bowl and utensils in sink
