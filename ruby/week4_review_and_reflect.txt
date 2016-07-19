@@ -1,0 +1,60 @@
+Variables
+
+1. What is a variable? Why might a programmer use a variable?
+
+  A variable is a container that holds data.  A programmer might use a variable to store a string, array, hash, fixnum, etc.  It can then be used accordingly in a method or program.
+
+2. If the value of first_name is "Abraham" and last_name is "Lincoln", explain the order in which Ruby will run the line full_name = first_name + last_name, and what the final result will be.
+
+  In the full_name variable, it will add the first_name and last_name together which will give us "AbrahamLincoln".  There are several ways to space out the first and last name so one example is full_name = first_name + " " + last_name.
+
+Data Types
+
+3. For each of the following data types, write a short definition and give at least one example of when you might use the data type in a program. (Don't use an example we've already provided.)
+
+  string - Typically represents characters.  Can put used to print out a statement. 
+  integer - Represents numbers.  Can be used to add numbers together. 
+  float - Represents decimal numbers.  Can be used to divide two numbers down to the decimal point. 
+  nil - Represents nothing.  Can be used to tell you if a function doesn't return a value.
+  boolean - True or False.  Can be used to see if a statement is true or false.
+  Algorithms - Creating ruby code to solve problems.  Can be used to create a method that checks if a word is a   palindrome.
+
+4. What is an algorithm?
+
+  An algorithm is code that solves problems.  An example is to create an algorithm that will add 1 to any given number.  
+
+5. What are two common categories of algorithm in computer science? 
+
+  Searching and Sorting.
+
+Methods
+
+6. What is a method? Why might a programmer choose to use a method?
+
+  A method allows you to define a name for a piece of code and also add parameters that you can pass to the method that will then run whatever you tell it to.  A programmer might choose to use a method because it helps keep code organized and more repeatable.
+
+7. Define the following terms as they relate to a method. 
+
+  return value - What the method returns after its run.
+  side effect - Modification of data after its run.
+  parameter - Data that can be passed to a method.
+  argument - While calling the method, it's the data passed to the method.
+  implicit return - Breaking out of a method early when a condition is met using return.
+
+8. What are global scope and method scope? How do those scopes impact the availability of data at different points in a program?
+
+  Global scope is data available everywhere in your rubyscript.  Method scope is available only to its current location.  These scopes impact where you can use these pieces of data, global being everywhere, method being online within the same location.
+
+Control Flow
+9. What is control flow? Why might a programmer choose to use flow control?
+
+  Control flow is how your interpreter moves through your code.  A programmer might choose to use flow control because it can go through conditions and check if it's been met and if not, return whatever it is you want.
+
+10. Define the following terms as they relate to flow control.
+
+  loop - Allows you to keep going through a code until it's condition is met.
+  if - If the condition is met, return whatever it is you want.
+  else - If the condition isn't met, return whatever it is you want.
+  elsif - A continuation of if.  Else if this condition is met, return whatever it is you want.
+  while - While the condition is or isn't met, runs the code until it is or isn't.
+  until - Until the codition is met, runs the code until it is.
