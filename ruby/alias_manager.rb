@@ -39,6 +39,7 @@ end
 p alias_manager("Felicia Torres")
 p alias_manager("aeiou bdf")
 
+#Asks user to enter first and last name.  Get any amount of names converted to an alias.
 name_storage = []
 loop do
   puts "Please enter your first and last name.  Type 'quit' to exit"
@@ -53,6 +54,7 @@ loop do
   end
 end
 
+#Tells the user who the alias actually is
 name_storage.each do |n|
   puts "#{n[1]} is actually #{n[0]}"
 end
