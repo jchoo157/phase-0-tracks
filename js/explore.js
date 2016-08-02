@@ -13,7 +13,7 @@ function reverse(word) {
 }
 
 // Driver code
-reverse("welcome")
+reverse("welcome");
 
 if (1 == 1) {
   reverse_hello = reverse("hello");
