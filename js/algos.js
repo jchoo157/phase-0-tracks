@@ -1,10 +1,10 @@
 // FUNCTION that takes an ARRAY as a PARAMETER and finds the longest STRING
-function longest_phrase(phrases) {
+function longest_word(words) {
 	var longest = "";
 	// Set i as a VARIABLE to iterate while i is less than phrases length and iterates by 1
-	for (var i = 0; i < phrases.length; i++) {
-		if (phrases[i].length > longest.length) {
-			longest = phrases[i];
+	for (var i = 0; i < words.length; i++) {
+		if (words[i].length > longest.length) {
+			longest = words[i];
 		}
 	}
 	console.log(longest)
@@ -34,13 +34,13 @@ function random_letters(number) {
 		}
 		result.push(rand_word)
 	}
-	console.log(result)
+	return result
 }
 
 // Driver code
-longest_phrase(["long phrase","longest phrase","longer phrase"])
-longest_phrase(["a", "aa", "aaa", "aaaaa", "aa", "a"])
-longest_phrase(["hello", "hi", "hey", "welcome", "hola"])
+longest_word(["long phrase","longest phrase","longer phrase"])
+longest_word(["a", "aa", "aaa", "aaaaa", "aa", "a"])
+longest_word(["hello", "hi", "hey", "welcome", "hola"])
 
 console.log("-------------")
 
@@ -54,4 +54,18 @@ random_letters(1)
 random_letters(2)
 random_letters(3)
 random_letters(8)
+
+console.log("--------------")
+
+// Generates an array, prints the array, feeds the array to 
+// your "longest word" function, and prints the result.
+for (var i = 0; i < 10; i++) {
+	var rand_num = Math.floor((Math.random() * 10) + 1);
+	var word_collection = random_letters(rand_num);
+	console.log(word_collection);
+	console.log("Longest Word:")
+	longest_word(word_collection);
+	console.log("-------------")
+	console.log()
+}
 
