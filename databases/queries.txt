@@ -1,0 +1,60 @@
+1. Display the information in one table (either table is fine).
+
+sqlite> SELECT * FROM posts;
+1|Programming|false|1
+2|Game of Thrones|true|2
+3|Robots!|false|3
+sqlite> 
+
+2. Update an item that meets some condition (you can choose a condition that makes sense).
+
+sqlite> UPDATE posts SET nsfw="true" WHERE title="Robots!";
+sqlite> SELECT * FROM posts;
+1|Programming|false|1
+2|Game of Thrones|true|2
+3|Robots!|true|3
+
+3. Display the information in both tables using one query.
+
+sqlite> SELECT * FROM posts, authors WHERE posts.author_id = authors.id;
+1|Programming|false|1|1|Johnny Choo
+2|Game of Thrones|true|2|2|George Martin
+3|Robots!|true|3|3|Bumble Bee
+4|Dragons|true|2|2|George Martin
+
+4. Display a narrower selection of columns (fewer columns than all of them, in other words) from both tables using one query.
+
+sqlite> SELECT posts.title, authors.name FROM posts JOIN authors ON posts.author_id = authors.id;
+Programming|Johnny Choo
+Game of Thrones|George Martin
+Robots!|Bumble Bee
+Dragons|George Martin
+
+5. Delete an item that meets some condition (you can choose a condition that makes sense).
+
+sqlite> DELETE FROM posts WHERE nsfw="true";
+sqlite> SELECT * FROM posts;
+1|Programming|false|1
+
+
+TRY THE THING
+
+// I added some new data because I deleted most of my other rows
+
+sqlite> INSERT INTO posts (title, nsfw, author_id) VALUES ("Super Duper", "false", 3);
+sqlite> INSERT INTO posts (title, nsfw, author_id) VALUES ("The Mountain", "true", 2);
+
+sqlite> SELECT title, nsfw, name FROM posts, authors WHERE posts.author_id = authors.id;
+Programming|false|Johnny Choo
+Super Duper|false|Bumble Bee
+The Mountain|true|George Martin
+
+-----------------------
+
+sqlite> SELECT title, nsfw, name FROM posts INNER JOIN authors ON posts.author_id = authors.id;
+Programming|false|Johnny Choo
+Super Duper|false|Bumble Bee
+The Mountain|true|George Martin
+
+
+
