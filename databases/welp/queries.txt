@@ -1,0 +1,32 @@
+1. In the welp directory, create a file called queries.txt. Once you've figured out the queries below, paste them into queries.txt, along with the output from your database.
+
+DONE
+
+2. You've joined two tables before. How do you join three?
+
+sqlite> SELECT businesses.name, users.first_name, users.last_name, reviews.comment, reviews.stars FROM reviews JOIN businesses ON reviews.business_id = businesse
+Grundy Hollow Wedding Chapel|Bradford|Pitt|great food!|5
+Amir's Towing|Holly|Berry|rude employees!|1
+Lotus Yoga|Angela|Jolie|great place!|4
+
+3. There are some repetitive columns if we choose to view all fields. Choose instead to just view the user's names, the business name, the star rating, and the comment.
+
+sqlite> SELECT users.first_name, users.last_name, businesses.name, reviews.stars, reviews.comment FROM users LEFT JOIN reviews ON users.id = reviews.user_id LEFT JOIN businesses ON reviews.business_id = businesses.id;
+Bradford|Pitt|Grundy Hollow Wedding Chapel|5|great food!
+Mandy|Kaling|||
+Angela|Jolie|Lotus Yoga|4|great place!
+Steven|Wonder|||
+Holly|Berry|Amir's Towing|1|rude employees!
+Merryl|Streepman|||
+Denzel|George|||
+
+4. How do you view the data of all three tables for just one particular business?
+
+sqlite> SELECT * FROM businesses LEFT JOIN reviews ON businesses.id = reviews.business_id LEFT JOIN users ON reviews.user_id = users.id WHERE businesses.id = 3;
+3|The Beagle Nightclub||||||||
+
+sqlite> SELECT * FROM businesses LEFT JOIN reviews ON businesses.id = reviews.business_id LEFT JOIN users ON reviews.user_id = users.id WHERE businesses.id = 1;
+1|Grundy Hollow Wedding Chapel|1|5|great food!|1|1|1|Bradford|Pitt
+
+sqlite> SELECT * FROM businesses LEFT JOIN reviews ON businesses.id = reviews.business_id LEFT JOIN users ON reviews.user_id = users.id WHERE businesses.id = 2;
+2|Amir's Towing|2|1|rude employees!|2|5|5|Holly|Berry
