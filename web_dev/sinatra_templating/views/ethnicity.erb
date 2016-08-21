@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add student ethnicity</title>
+</head>
+<body>
+  <form action="/students/add_ethnicity" method="POST">
+      <!-- <input type="text" name="name"> -->
+    <label for="name">Select Student</label>
+    <select id="name" name="name" type="text">
+      <% @students.each do |student| %>
+        <option value='<%= student["name"] %>'><%= "#{student["name"]}" %></option>
+      <% end %>
+    </select>
+
+    <label for="ethnicity">Select Ethnicity</label>
+    <select id="ethnicity" name="ethnicity" type="text">
+      <option value="Asian">Asian</option>
+      <option value="Caucasian">Caucasian</option>
+      <option value="Hispanic">Hispanic</option>
+      <option value="Middle Eastern">Middle Eastern</option>
+      <option value="African American">African American</option>
+    </select>
+
+    <button type="submit">Save</button>
+  </form>
+</body>
+</html>

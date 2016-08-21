@@ -25,3 +25,17 @@ post '/students' do
 end
 
 # add static resources
+get '/students/ethnicity' do
+  # Added an ethnicity column using the SQL query below
+  # db.execute("ALTER TABLE students ADD COLUMN ethnicity VARCHAR(255);")
+  @students = db.execute("SELECT * FROM students")
+  erb :ethnicity
+end
+
+post '/students/add_ethnicity' do
+  ethnicity = params[:ethnicity]
+  name = params[:name]
+  db.execute("UPDATE students SET ethnicity=(?) WHERE name=(?)", [ethnicity, name])
+  redirect '/'
+end
+
